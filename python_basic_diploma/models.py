@@ -2,7 +2,7 @@ from peewee import MySQLDatabase, Model, CharField
 import os
 
 
-db = MySQLDatabase('history_bot', host="localhost", port=3306, user='root', passwd=os.getenv('PASSWORD'))
+db = MySQLDatabase('history_bot', host="guarded-oasis-38067.herokuapp.com", port=3306, user='root', passwd=os.getenv('PASSWORD'))
 
 
 class BaseModel(Model):
