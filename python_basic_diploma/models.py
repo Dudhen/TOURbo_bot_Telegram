@@ -1,7 +1,7 @@
 from peewee import Model, CharField, PostgresqlDatabase
 
 
-db = PostgresqlDatabase(database='telegram_bot_history', host="127.0.0.1", port=5432,
+db = PostgresqlDatabase(database='telegram_bot_history', host="guarded-oasis-38067.herokuapp.com",
                         user='postgres', password="Arseny_20")
 
 
