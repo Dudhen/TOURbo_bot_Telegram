@@ -1,8 +1,7 @@
-from peewee import MySQLDatabase, Model, CharField
-import os
+from peewee import Model, CharField, PostgresqlDatabase
 
-
-db = MySQLDatabase('history_bot', host="guarded-oasis-38067.herokuapp.com", port=3306, user='root', passwd=os.getenv('PASSWORD'))
+db = PostgresqlDatabase(database='telegram_bot_history', host="localhost", port=5432,
+                        user='postgres', password="Arseny_20")
 
 
 class BaseModel(Model):
@@ -16,6 +15,9 @@ class User(BaseModel):
     command = CharField(max_length=20)
     date_time = CharField(max_length=50)
     results = CharField(max_length=255)
+
+    class Meta:
+        db_table = 'User'
 
 
 User.create_table()

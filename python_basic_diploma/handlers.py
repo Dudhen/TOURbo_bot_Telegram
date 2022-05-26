@@ -146,7 +146,8 @@ def choose_city(command, message):
         end, i = 'оптимальные предложения', 1
 
     bot.send_message(message.chat.id,  'Пожалуйста, введите город, '
-                                       'в котором нужно поискать самые {}.'.format(end))
+                                       'в котором нужно поискать самые {}:\n(К сожалению города России не доступны '
+                                       'для поиска. Приносим свои извинения.)'.format(end))
     if i == 0:
         bot.register_next_step_handler(message, hotels_count)
     else:
