@@ -371,7 +371,9 @@ def general_process(message):
                           '\nРасстояние от центра: {}'\
                           '\nСтоимость отеля за ночь: {}' \
                           '{}' \
-                          '\nСсылка на отель: https://www.hotels.com/ho{}\n'.format(i_elem['name'],
+                          '\nСсылка на отель: https://www.hotels.com/ho{}\n' \
+                          '(Если у вас в Телеграм установлен русский язык в настройках,' \
+                          'то откройте ссылку с помощью браузера).'.format(i_elem['name'],
                                                                                    address, distance,
                                                                                    price, price_sum,
                                                                                    i_elem['id'])
