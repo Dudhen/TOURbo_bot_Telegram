@@ -1,8 +1,8 @@
 from peewee import Model, CharField, PostgresqlDatabase
 
 
-db = PostgresqlDatabase(database='telegram_bot_history', host="guarded-oasis-38067.herokuapp.com",
-                        user='postgres', password="Arseny_20")
+db = PostgresqlDatabase(database='dbmrpspdsoicm', host="ec2-18-210-64-223.compute-1.amazonaws.com", port=5432,
+                        user='oykubrgiqoykvk', password="bd8703d1b460f6d221683f59f756d732537b879328cbb6921fcb064f8da6619d")
 
 
 class BaseModel(Model):
