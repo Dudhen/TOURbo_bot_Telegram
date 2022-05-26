@@ -1,11 +1,8 @@
 from peewee import Model, CharField, PostgresqlDatabase
-from playhouse.db_url import connect
-import os
 
-db = connect(os.environ.get('DATABASE_URL'))
 
-# db = PostgresqlDatabase(database='telegram_bot_history', host="guarded-oasis-38067.herokuapp.com", port=5432,
-#                         user='postgres', password="Arseny_20")
+db = PostgresqlDatabase(database='telegram_bot_history', host="localhost", port=5432,
+                        user='postgres', password="Arseny_20")
 
 
 class BaseModel(Model):
