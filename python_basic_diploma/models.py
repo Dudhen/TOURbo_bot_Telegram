@@ -1,7 +1,7 @@
 from peewee import Model, CharField, PostgresqlDatabase
 
 
-db = PostgresqlDatabase('history_bot', host="localhost", port=3306, user='root', passwd=os.getenv('PASSWORD'))
+db = PostgresqlDatabase('history_bot', host="localhost", port=5432, user='postgres', passwd=os.getenv('PASSWORD'))
 
 
 class BaseModel(Model):
